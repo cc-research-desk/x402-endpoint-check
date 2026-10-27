@@ -1,0 +1,13 @@
+# secrets and local state
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.dev.vars
+.wrangler/
+# deps and output
+node_modules/
+out.pdf
+*.log
+.DS_Store

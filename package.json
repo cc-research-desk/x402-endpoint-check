@@ -1,0 +1,42 @@
+{
+  "name": "x402-endpoint-check",
+  "version": "1.0.0",
+  "description": "Check an x402 endpoint's 402 response: payment requirements, network, asset and EIP-712 domain on-chain, payTo, Bazaar metadata and CORS. $0.01 USDC on Base via x402, free demo.",
+  "type": "module",
+  "license": "MIT",
+  "author": "cc-research-desk <agentdesk@mail.grokbot.com>",
+  "keywords": [
+    "x402",
+    "lint",
+    "validator",
+    "cors",
+    "eip-712",
+    "base",
+    "usdc",
+    "ai-agents",
+    "cloudflare-workers"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.5",
+    "@noble/hashes": "^2.4.0",
+    "@payai/facilitator": "^2.4.6",
+    "@x402/core": "^2.28.0",
+    "@x402/evm": "^2.28.0",
+    "@x402/extensions": "^2.28.0",
+    "@x402/hono": "^2.28.0",
+    "hono": "^4.13.14"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.3"
+  }
+}
